@@ -6,6 +6,15 @@ An OpenClaw skill for querying Chinese railway tickets via 12306 using mcporter 
 
 This skill provides tools to search for G/D/C train tickets, check train schedules, query seat availability, and plan rail travel between Chinese cities. It supports filtering by date, time range, train type, and sorting results.
 
+## Project Structure
+
+mcporter-railway-query/
+├── scripts/              # Shell helper scripts
+├── references/           # Station code reference
+├── README.md
+├── README_zh.md
+└── LICENSE
+
 ## Prerequisites
 
 1. Install mcporter CLI: `npm install -g mcporter`

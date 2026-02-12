@@ -6,6 +6,15 @@
 
 此技能提供了查询 G/D/C 字头列车车票、查看列车时刻表、查询座位可用性以及规划城市间铁路旅行的工具。支持按日期、时间段、列车类型过滤以及结果排序。
 
+## 项目结构
+
+mcporter-railway-query/
+├── scripts/              # Shell helper scripts
+├── references/           # Station code reference
+├── README.md
+├── README_zh.md
+└── LICENSE
+
 ## 先决条件
 
 1. 安装 mcporter CLI: `npm install -g mcporter`
