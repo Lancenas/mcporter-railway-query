@@ -19,6 +19,19 @@ mcporter-railway-query/
 
 1. 安装 mcporter CLI: `npm install -g mcporter`
 2. 在 `~/.mcporter/mcporter.json` 中配置 12306 MCP 服务器
+    ```
+      {
+        "mcpServers": {
+           "12306": {
+              "type": "sse",
+               "url": "http://127.0.0.1:8080/sse",
+              "name": "12306 高铁动车查询",
+              "description": "查询高铁（G开头）和动车（D开头）余票，支持出发站、到达站、日期、时间段过滤。只返回G/D车次。",
+              "enabled": true
+            }
+        }
+     }
+    ```
 3. 确保 MCP 服务器正在运行
 
 ## 安装
