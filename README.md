@@ -74,3 +74,20 @@ See `references/station-codes.md` for the complete list.
 ## License
 
 MIT
+
+## Security & Compliance
+
+This project is a read-only OpenClaw skill that:
+
+- Does NOT collect user data
+- Does NOT store credentials
+- Does NOT perform ticket booking
+- Does NOT bypass 12306 authentication
+- Does NOT execute arbitrary system commands
+- Does NOT write to local file system
+- Does NOT open network listeners
+- Does NOT include obfuscated or encrypted code
+
+All queries are executed through official 12306 MCP interfaces configured by the user.
+
+This repository contains only helper scripts and configuration examples.
