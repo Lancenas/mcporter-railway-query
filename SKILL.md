@@ -1,6 +1,6 @@
 ---
 name: mcporter-railway-query
-description: Query and book Chinese railway tickets via 12306 using mcporter CLI. Use when user wants to search for G/D/C train tickets, check train schedules, query seat availability, or plan rail travel between Chinese cities. Supports filtering by date, time range, train type, and sorting results.
+description：通过 mcporter CLI 查询和预订中国铁路票务。适用于用户想要搜索 G/D/C 车票、查看列车时刻表、查询座位可用性或规划中国城市之间的铁路旅行。支持按日期、时间范围、列车类型进行筛选，并对结果进行排序。
 ---
 
 # mcporter Railway Ticket Query
