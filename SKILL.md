@@ -1,6 +1,8 @@
 ---
 name: mcporter-railway-query
-description：通过 mcporter CLI 查询和预订中国铁路票务。适用于用户想要搜索 G/D/C 车票、查看列车时刻表、查询座位可用性或规划中国城市之间的铁路旅行。支持按日期、时间范围、列车类型进行筛选，并对结果进行排序。
+description: 通过 mcporter CLI 查询和预订中国铁路票务。适用于用户想要搜索 G/D/C 车票、查看列车时刻表、查询座位可用性或规划中国城市之间的铁路旅行。支持按日期、时间范围、列车类型进行筛选，并对结果进行排序。
+version: 1.0.6
+license: MIT
 ---
 
 # mcporter Railway Ticket Query
@@ -102,7 +104,7 @@ mcporter call 12306.get-tickets \
 | 城市 | 代码 | 城市 | 代码 |
 |------|------|------|------|
 | 上海 | SHH | 上海虹桥 | AOH |
-| 杭州东 | HZH | 无锡 | WXH |
+| 杭州 | HZH | 无锡 | WXH |
 | 江阴 | KYH | 南京南 | NKH |
 
 完整列表见 [station-codes.md](references/station-codes.md)
