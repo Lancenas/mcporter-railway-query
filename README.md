@@ -13,6 +13,8 @@ mcporter-railway-query/
 ├── references/           # Station code reference
 ├── README.md
 ├── README_zh.md
+├── SKILL.md
+├── SECURITY.md
 └── LICENSE
 
 ## Prerequisites
@@ -46,12 +48,12 @@ openclaw skills install mcporter-railway-query.skill
 
 The skill provides several helper scripts:
 
-### Query afternoon trains (12:00-18:00)
+### Query afternoon trains (12:00-18:00, including G/D/C all train types)
 ```bash
 ./scripts/query-afternoon.sh 2026-02-18 SHH KYH
 ```
 
-### Query all-day trains
+### Query all-day trains (including G/D/C all train types)
 ```bash
 ./scripts/query-tickets.sh 2026-02-18 AOH HZH
 ```
@@ -88,7 +90,7 @@ mcporter call 12306.get-tickets \
 |---------|------|-------|
 | 上海 | SHH | Shanghai Station |
 | 上海虹桥 | AOH | Shanghai Hongqiao Station |
-| 杭州东 | HZH | Hangzhou East Station |
+| 杭州东 | HGH | Hangzhou East Station |
 | 江阴 | KYH | Jiangyin Station |
 
 See `references/station-codes.md` for the complete list.
@@ -99,13 +101,13 @@ MIT
 
 ## Security & Compliance
 
-This project is a read-only OpenClaw skill that:
+This project is a read-only OpenClaw skill that invokes `mcporter` CLI as its sole external dependency:
 
 - Does NOT collect user data
 - Does NOT store credentials
 - Does NOT perform ticket booking
 - Does NOT bypass 12306 authentication
-- Does NOT execute arbitrary system commands
+- Does NOT execute arbitrary system commands (only `mcporter` with user-controlled parameters)
 - Does NOT write to local file system
 - Does NOT open network listeners
 - Does NOT include obfuscated or encrypted code

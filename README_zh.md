@@ -13,6 +13,8 @@ mcporter-railway-query/
 ├── references/           # Station code reference
 ├── README.md
 ├── README_zh.md
+├── SKILL.md
+├── SECURITY.md
 └── LICENSE
 
 ## 先决条件
@@ -46,12 +48,12 @@ openclaw skills install mcporter-railway-query.skill
 
 技能提供了几个辅助脚本：
 
-### 查询下午班次 (12:00-18:00)
+### 查询下午班次 (12:00-18:00，含 G/D/C 全部车型)
 ```bash
 ./scripts/query-afternoon.sh 2026-02-18 SHH KYH
 ```
 
-### 查询全天班次
+### 查询全天班次（含 G/D/C 全部车型）
 ```bash
 ./scripts/query-tickets.sh 2026-02-18 AOH HZH
 ```
@@ -88,7 +90,7 @@ mcporter call 12306.get-tickets \
 |------|------|------|
 | 上海 | SHH | 上海站 |
 | 上海虹桥 | AOH | 上海虹桥站 |
-| 杭州东 | HZH | 杭州东站 |
+| 杭州东 | HGH | 杭州东站 |
 | 江阴 | KYH | 江阴站 |
 
 完整列表请参见 `references/station-codes.md`。
@@ -99,14 +101,14 @@ MIT
 
 ## 安全声明
 
-本项目仅为只读查询工具：
+本项目仅为只读查询工具，通过脚本调用 `mcporter` CLI 完成查询：
 
 - 不收集用户数据
 - 不存储账号信息
 - 不进行抢票或自动购票
 - 不绕过 12306 身份验证
-- 不执行系统命令
 - 不写入本地文件
 - 不包含混淆或加密代码
+- 唯一调用的外部命令为 `mcporter`，参数完全由用户控制
 
 所有查询均通过用户自行配置的 12306 MCP 服务完成。

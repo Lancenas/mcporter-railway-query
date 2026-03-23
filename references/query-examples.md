@@ -43,7 +43,7 @@ mcporter call 12306.get-train-route-stations \
 | date | 日期 (YYYY-MM-DD) | "2026-02-14" |
 | fromStation | 出发站代码 | "SHH" |
 | toStation | 到达站代码 | "KYH" |
-| trainFilterFlags | 车次类型过滤 | "G"=高铁, "D"=动车, "GD"=高铁+动车 |
+| trainFilterFlags | 车次类型过滤 | "G"=高铁, "D"=动车, "GD"=高铁+动车, ""=全部(含G/D/C) |
 | earliestStartTime | 最早出发时间 (0-24) | 12 |
 | latestStartTime | 最晚出发时间 (0-24) | 18 |
 | sortFlag | 排序方式 | "startTime" / "arriveTime" / "duration" |
